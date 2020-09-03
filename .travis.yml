@@ -12,7 +12,7 @@ deploy:
   skip-cleanup: true
   github-token: $GH_TOKEN
   keep-history: true
-  target-branch: master # deploy to branch 'master'
+  target-branch: release # deploy to branch 'release'
   on:
-    branch: dev
+    branch: master
   local-dir: public
