@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 12 # use node.js v12
+cache: npm
+branches:
+  only:
+    - master # build master branch only
+script:
+  - node gen.js # generate rss files
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN
+  keep-history: true
+  target-branch: release # deploy to branch 'release'
+  on:
+    branch: master
