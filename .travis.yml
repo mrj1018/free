@@ -15,4 +15,3 @@ deploy:
   target-branch: release # deploy to branch 'release'
   on:
     branch: master
-  local-dir: public
