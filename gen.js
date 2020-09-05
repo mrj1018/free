@@ -19,7 +19,7 @@ while (true){
     urlcnt++;
 }
 
-var target_b64=btoa(target_cont);
+var target_b64=Buffer.from(target_cont).toString("base64");
 
 var ouf_file=fs.openSync(ouf_filename,"w");
 fs.writeSync(ouf_file,target_b64,"utf-8");
